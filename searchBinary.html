@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchBinary.css">
+    <title>Binary Search</title>
+</head>
+<body>
+    <div class="introContainer" id="firstContainer">
+        <label for="askingsize">Enter the Size of (Sorted) Array to be Generated for Binary Search</label>
+        <input type="text" name="size" id="arraysize">
+        <button id="generateSortedArray">Generate</button>
+    </div>
+
+    <div class="arrayContainer" id="secondContainer">
+    </div>
+    
+    <div class="lastContainer" id="thirdContainer">
+        <label for="askingkey">Enter the key from the above Array to be searched</label>
+        <input type="text" name="size" id="key">
+        <button id="searchKeyInArray">Search</button>
+    </div>
+
+    <div class="container" id="infoContainer">
+        <p>
+            This is a Logarithmic Time Search Algorithm 
+            In this Algorithm we compute the mid by (first + last / 2)
+            Then we check if the mid is the key 
+            If the mid is less than key the key is present on the right subarray
+            and viceversa
+            After comparing the mid we make reccursive call to the same function to 
+            to check either in right or the left sub array
+            To call for left sub array we update last index to be mid - 1
+            and to call for right sub array we update first index to be mid + 1
+            and eventually we fall in the case where the key either matches with mid or the key is not present in the array
+
+        </p>
+    </div>
+
+     <div class="link">
+         <a href="index.html" class="button">HOME</a>
+     </div>
+     <script src="searchBinary.js"></script>
+</body>
+</html>

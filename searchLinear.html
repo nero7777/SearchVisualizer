@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchLinear.css">
+    <title>Linear Search</title>
+</head>
+<body>
+   <div class="introContainer" id="firstContainer">
+       <label for="askingsize">Enter the Size of Array to be Generated</label>
+       <input type="text" name="size" id="arraysize">
+       <button id="generateLinearArray">Generate</button>
+   </div>
+   <div class="arrayContainer" id="secondContainer">
+   </div>
+   <div class="lastContainer" id="thirdContainer">
+    <label for="askingkey">Enter the key from the above Array to be searched</label>
+    <input type="text" name="size" id="key">
+    <button id="searchKeyInArray">Search</button>
+</div>
+    <div class="container" id="infoContainer">
+        <p>
+            This is a Linear Time Search Algorithm 
+            In this Algorithm we traverse from first element to the last element
+            to search for the given key by comparing the current element with the key
+            If we get the key we return the index of the found element
+            In Best Case this algorithm works in O(1) time complexity
+            and in Worst Case this works in O(n)
+        </p>
+    </div>
+    <div class="link">
+        <a href="index.html" class="button">HOME</a>
+    </div>
+    <script src="searchLinear.js"></script>
+</body>
+</html>
