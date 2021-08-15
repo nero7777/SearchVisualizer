@@ -40,6 +40,8 @@ const linearSearch = (arr,x) => {
         if(arr[i].innerHTML == x){
             arr[i].classList.remove("comparing")
             arr[i].classList.add("found")  
+            document.getElementById("successMessage").innerHTML=`Element found at position : ${i+1}`
+            document.getElementById("successMessage").style.visibility="visible";
             return       
         }
         setTimeout(() => {
@@ -48,6 +50,8 @@ const linearSearch = (arr,x) => {
         }, 500);
        
       }
+      document.getElementById("successMessage").innerHTML=`Element not found !!`
+            document.getElementById("successMessage").style.visibility="visible";
       
   }, 1000);
 }

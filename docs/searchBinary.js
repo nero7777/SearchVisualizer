@@ -1,11 +1,14 @@
+//taking all the inputs and storing them
 var generatebutton = document.getElementById("generateSortedArray");
+var searchbutton = document.getElementById("searchKeyInArray")
 
 var sizeOfArray = document.getElementById("arraysize").value;
+var key = document.getElementById("key").value;
 
 var binaryArray = []
 
 
-
+//methods to create and search elements in the given array
 const generateArray = (sizeOfArray) => {
     let size = sizeOfArray;
     for(let i=1;i<=size;i++){
@@ -27,6 +30,36 @@ const generateArray = (sizeOfArray) => {
     document.getElementById('infoContainer').style.visibility="visible";
 }
 
+const binarySearch = (arr,x,low,high) => {
+    setInterval(() => {
+        let mid = Math.floor((low + high) / 2);
+    arr[mid].classList.add("comparing")
+    setInterval(() => {
+        if(arr[mid].innerHTML == x){
+            arr[mid].classList.remove("comparing")
+            arr[mid].classList.add("found")
+            return
+        }else if(arr[mid].innerHTML > x){
+            high = (mid - 1);
+            binarySearch(arr,x,low,high)
+            arr[mid].classList.add("comparing")
+        }else{
+            low = (mid + 1)
+            binarySearch(arr,x,low,high)
+            arr[mid].classList.add("comparing")
+        }
+    }, 500);
+   
+    }, 1000);
+    
+}
+
+//event listeners on the buttons
 generatebutton.addEventListener('click',function(){
     generateArray(document.getElementById("arraysize").value);
+})
+searchbutton.addEventListener('click',function(){
+    document.getElementById('thirdContainer').style.display="none";
+    var key = document.getElementById("key").value;
+    binarySearch(binaryArray,key,0,binaryArray.length)
 })

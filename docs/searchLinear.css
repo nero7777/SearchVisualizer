@@ -99,6 +99,17 @@ a{
     width: 150px;
     cursor: pointer;
 }
+#successMessage{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    visibility: hidden;
+    font-size: 32px;
+    letter-spacing: 5px;
+    line-height: 2;
+    padding: 10px 40px;
+}
 
 #infoContainer{
     visibility: hidden;
