@@ -51,7 +51,7 @@ const linearSearch = (arr,x) => {
        
       }
       document.getElementById("successMessage").innerHTML=`Element not found !!`
-            document.getElementById("successMessage").style.visibility="visible";
+      document.getElementById("successMessage").style.visibility="visible";
       
   }, 1000);
 }
