@@ -139,3 +139,14 @@ a{
     line-height: 2.5;
     margin: 0 5px;
 }
+.endpoints{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    background-color: rgb(34, 151, 34);
+    text-align: center;
+    line-height: 2.5;
+    margin: 0 5px;
+}

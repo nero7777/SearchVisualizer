@@ -38,15 +38,21 @@ const binarySearch = (arr,x,low,high) => {
         if(arr[mid].innerHTML == x){
             arr[mid].classList.remove("comparing")
             arr[mid].classList.add("found")
+            document.getElementById("successMessage").innerHTML=`Element found at position : ${i+1}`
+            document.getElementById("successMessage").style.visibility="visible";
             return
         }else if(arr[mid].innerHTML > x){
             high = (mid - 1);
             binarySearch(arr,x,low,high)
             arr[mid].classList.add("comparing")
+            arr[low].classList.add("endpoints")
+            arr[high].classList.add("endpoints")
         }else{
             low = (mid + 1)
             binarySearch(arr,x,low,high)
             arr[mid].classList.add("comparing")
+            arr[low].classList.add("endpoints")
+            arr[high].classList.add("endpoints")
         }
     }, 500);
    
